@@ -1,0 +1,63 @@
+<template>
+  <div>
+    <footer>
+      <div class="bg-white text-black text-center py-3">
+        <div class="container mt-4">
+          <div class="row">
+            <div class="col">
+              <a class="navbar-brand" href="#">
+                <img :src="require('@/assets/img/logo.png')" alt="Twitter Logo" style="width: 50%" /> </a
+              ><br /><br />
+              <a href="#"> <img :src="require('@/assets/img/google-play-badge.svg')" /> </a><br />
+              <a href="#">
+                <img :src="require('@/assets/img/applestore.svg')" class="applestore-img" />
+              </a>
+            </div>
+            <div class="col">
+              <h2>Every Where On Any Device</h2>
+              <p>Get MUTWARE KID TV on your device downoald the App and start restricting for <b>FREE</b> TO DAY</p>
+            </div>
+            <div class="col">
+              <a href="stream.html">
+                <img :src="require('@/assets/img/live-stream.png')" class="live-streaming-img" />
+              </a>
+              <h2>Join Our <b>Live</b> session here</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-pink text-black text-center py-3">
+        <div class="container mt-4">
+          <div class="row">
+            <div class="col">
+              <a href="#">
+                <img :src="require('@/assets/img/mutwarekid.png')" style="height: 270px" />
+              </a>
+            </div>
+            <div class="col">
+              <h2>Our Office</h2>
+              <p><i class="fas fa-home me-3 text-secondary"></i> KG 622 St, Kigali</p>
+              <p><i class="fas fa-home me-3 text-secondary"></i> RN1, Butare, RW</p>
+              <p><i class="fas fa-location me-3 text-secondary"></i> Kigali & Huye</p>
+            </div>
+            <div class="col">
+              <h2>SOCIAL MEDIA</h2>
+              <h5>Mutware Educate</h5>
+              <!-- Twitter -->
+              <img :src="require('@/assets/logo/Twitter.webp')" alt="Twitter Logo" style="width: 12%" />
+              <!-- Instagram -->
+              <img :src="require('@/assets/logo/instagram.png')" alt="Instagram Logo" style="width: 12%" />
+              <!--  Facebooks-->
+              <img :src="require('@/assets/logo/facebook.png')" alt="Instagram Logo" style="width: 12%" /><br />
+              <!-- Youtube -->
+              <img :src="require('@/assets/logo/youtube.png')" alt="Instagram Logo" style="width: 44%" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-green text-white text-center py-3">
+        <p>&copy; 2023 Mutware Kid. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</template>
