@@ -124,10 +124,12 @@
                 <div class="col-md-6">
                   <div class="card">
                     <div class="card-body">
-                      <img :src="require('@/assets/img/numberskid.png')" class="d-block w-100" alt="..." />
-                      <a href="restrict.html" class="play-icon">
-                        <i class="fas fa-play"></i>
-                      </a>
+                      <router-link :to="'/category/number'">
+                        <img :src="require('@/assets/img/numberskid.png')" class="d-block w-100" alt="..." />
+                        <a :href="'/category/number'" class="play-icon">
+                          <i class="fas fa-play"></i>
+                        </a>
+                      </router-link>
                     </div>
                   </div>
                 </div>
@@ -144,10 +146,12 @@
                 <div class="col-md-6">
                   <div class="card">
                     <div class="card-body">
-                      <img :src="require('@/assets/img/muhouse-01.png')" class="d-block w-100" alt="..." />
-                      <a href="restrict.html" class="play-icon">
-                        <i class="fas fa-play"></i>
-                      </a>
+                      <router-link :to="'/category/myhome'">
+                        <img :src="require('@/assets/img/muhouse-01.png')" class="d-block w-100" alt="..." />
+                        <a :href="'/category/myhome'" class="play-icon">
+                          <i class="fas fa-play"></i>
+                        </a>
+                      </router-link>
                     </div>
                   </div>
                 </div>
@@ -164,10 +168,12 @@
                 <div class="col-md-6">
                   <div class="card">
                     <div class="card-body">
-                      <img :src="require('@/assets/img/alphabestkids-01.png')" class="d-block w-100" alt="..." />
-                      <a href="restrict.html" class="play-icon">
-                        <i class="fas fa-play"></i>
-                      </a>
+                      <router-link :to="'/category/alphabetic'">
+                        <img :src="require('@/assets/img/alphabestkids-01.png')" class="d-block w-100" alt="..." />
+                        <a :href="'/category/alphabetic'" class="play-icon">
+                          <i class="fas fa-play"></i>
+                        </a>
+                      </router-link>
                     </div>
                   </div>
                 </div>
@@ -184,10 +190,12 @@
                 <div class="col-md-6">
                   <div class="card">
                     <div class="card-body">
-                      <img :src="require('@/assets//img/puzzle-01.jpg')" class="d-block w-100" alt="..." />
-                      <a href="restrict.html" class="play-icon">
-                        <i class="fas fa-play"></i>
-                      </a>
+                      <router-link :to="'/category/myfamiy'">
+                        <img :src="require('@/assets//img/puzzle-01.jpg')" class="d-block w-100" alt="..." />
+                        <a :href="'/category/myfamiy'" class="play-icon">
+                          <i class="fas fa-play"></i>
+                        </a>
+                      </router-link>
                     </div>
                   </div>
                 </div>

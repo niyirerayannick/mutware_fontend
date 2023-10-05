@@ -53,6 +53,16 @@ const router = createRouter({
       name: 'WatchPage',
       component: () => import('../views/Watch.vue'),
     },
+    {
+      path: '/category/:category_name',
+      name: 'CategoryPage',
+      component: () => import('../views/Category.vue'),
+    },
+    {
+      path: '/search',
+      name: 'SearchPage',
+      component: () => import('../views/Search.vue'),
+    },
   ],
 })
 

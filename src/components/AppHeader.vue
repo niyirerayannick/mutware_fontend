@@ -33,6 +33,7 @@
           </form>
           <div class="user-profile" v-else>
             <img :src="require('@/assets/img/profile.jpg')" class="profile-img" />
+            <span class="profile-name">{{user.full_name}}</span>
           </div>
         </div>
       </nav>
@@ -53,9 +54,19 @@ export default {
 <style>
 .user-profile {
   margin-left: 325px;
+  position: relative;
 }
 .profile-img {
-    height: 55px;
-    border-radius: 50%;
+  height: 55px;
+  border-radius: 50%;
+}
+.profile-name {
+  position: absolute;
+  bottom: -14px;
+  left: 100%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
 }
 </style>
