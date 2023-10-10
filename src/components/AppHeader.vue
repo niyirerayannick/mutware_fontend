@@ -23,7 +23,7 @@
             aria-label="Search"
           />
           <span style="margin: 0 40px"></span>
-          <form class="form-inline my-2 my-lg-0" v-if="!user">
+          <form class="form-inline my-2 my-lg-0" v-if="user == null || user.username === 'Guest'">
             <router-link to="/register" class="btn register-button my-2 my-sm-0" type="submit">Register</router-link>
             <span style="margin: 0 20px"></span>
             <router-link to="/login" class="btn login-button my-2 my-sm-0" type="submit">Sign In</router-link>

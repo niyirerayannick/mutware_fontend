@@ -220,18 +220,18 @@
 .navbar-brand{
   margin-left: 50px;
 }
-/*.login-button {
+.login-button {
   color: #000;
   background-color: #fef2f2;
   border-color: #f3d5d5;
   width: 140px;
-}*/
-/*.register-button {
+}
+.register-button {
   color: #fff;
   background-color: #12cca8;
   border-color: #12cca8;
   width: 140px;
-}*/
+}
 .play-text {
     margin-left: -42%;
     font-size: 29px;

@@ -148,14 +148,14 @@ export default {
   z-index: 2; 
 }
 
-.register-button {
+/*.register-button {
   color: #000;
   background-color: #fef2f2;
   border-color: #f3d5d5;
   width: 100%;
   max-width: 140px; 
   margin-top: 10px; 
-}
+}*/
 
 @media (min-width: 1024px) {
   .register {
