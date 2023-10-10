@@ -1,15 +1,21 @@
 <template>
   <div>
     <Header />
-    <section class="home-content">
-      <div class="container mt-4">
-        <img :src="require('@/assets/img/mutware_banner.png')" style="margin-left: 10%; margin-top: -5%; width: 50%" />
-        <br /><br />
-        <h1 class="text-center middle-title">
-          <b>Get started with</b>
-          <div class="category">{{ this.$route.params.category_name }}</div>
-        </h1>
+    <div class="custom-jumbotron">
+      <div class="overly"></div>
+      <div class="container">
+        <div style="margin-top: 5%;margin-left: 15%;">
+          <img :src="require('@/assets/img/mutware_banner.png')" style="margin-left: 10%; margin-top: -5%; width: 60%" />
+          <br /><br />
+          <h1 class="text-center middle-title">
+            <b>LEARN</b> <span>through</span> <b>PLAY</b>
+          </h1>
+        </div>
         <br />
+      </div>
+    </div>
+    <section class="video-list">
+      <div class="container mt-4">
         <div v-if="loading">
           <div class="skeleton-loader">
             <VideoListSkeleton />
@@ -29,7 +35,8 @@
             class="list-group-item list-group-item-action flex-column align-items-start"
           >
             <div class="d-flex w-100 justify-content-between">
-              <img :src="video.banner" class="img-listing" alt="..." />
+              <img :src="'http://backend.mutwarekidtv.xyz/' + video.banner" class="img-listing" alt="..." />
+              <!-- <img :src="video.banner" class="img-listing" alt="..." /> -->
               <div class="video-play-loader">
                 <span class="play-icon play"><i class="fas fa-play"></i></span>
               </div>
@@ -42,7 +49,7 @@
             </div>
           </router-link>
         </div>
-        <div v-else><h3>No video found</h3></div>
+        <div v-else><h3>No video found</h3></div><br><br><br>
       </div>
     </section>
     <Footer />
@@ -164,7 +171,6 @@ export default {
     transform: scale3d(1.5, 1.5, 1);
   }
 }
-
 .skeleton-loader {
   background-color: #ffffff;
   border-radius: 10px;
@@ -177,16 +183,24 @@ h4 {
   font-weight: 600;
 }
 .small {
-  font-weight: 700;
+  font-weight:700;
 }
-.category {
-  font-family: cursive;
-  color: rgb(255, 124, 62);
-  text-transform: capitalize;
-  font-size: 43px;
-  font-weight: 800;
-  font-style: 20px;
+.middle-title {
+  margin-top: 1%;
+  font-family: 'Jockey One',;
+  font-weight: 400;
+  font-size: 48px;
+  color: #FFFDFD;
+  line-height: normal;
 }
+.middle-title span{
+  font-family: 'Abhaya Libre';
+}
+.video-list {
+  /*background-color: #fbf9f9;*/
+  /*margin-top: -4%;*/
+}
+
 @media (max-width: 767px) {
   .list-group-item {
     flex-direction: column;
@@ -205,4 +219,5 @@ h4 {
     display: grid!important;
   }
 }
+
 </style>

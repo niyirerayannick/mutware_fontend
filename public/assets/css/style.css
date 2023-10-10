@@ -209,7 +209,10 @@
 }
 
 .applestore-img {
-  width: 50%;
+  width: 100%;
+}
+.playstore-img {
+  width: 110%;
 }
 .live-streaming-img {
   width: 41%;

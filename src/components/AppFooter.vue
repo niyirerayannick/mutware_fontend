@@ -8,10 +8,23 @@
               <a class="navbar-brand" href="#">
                 <img :src="require('@/assets/img/logo.png')" alt="Twitter Logo" style="width: 50%" /> </a
               ><br /><br />
-              <a href="#"> <img :src="require('@/assets/img/google-play-badge.svg')" /> </a><br />
-              <a href="#">
-                <img :src="require('@/assets/img/applestore.svg')" class="applestore-img" />
-              </a>
+              <router-link to="/register" class="btn register-button my-2 my-sm-0" type="submit" style="width: 90%; height: 8vh;">Register Now</router-link><br><br>
+              <div class="row">
+                <div class="col">
+                  <a href="#"> <img :src="require('@/assets/img/google-play-badge.svg')" class="playstore-img" /> </a>
+                </div>
+                <div class="col">
+                  <a href="#">
+                    <img :src="require('@/assets/img/applestore.svg')" class="applestore-img" />
+                  </a>
+                </div>
+              </div>
+              <!-- <div>
+                <a href="#"> <img :src="require('@/assets/img/google-play-badge.svg')" /> </a><br />
+                <a href="#">
+                  <img :src="require('@/assets/img/applestore.svg')" class="applestore-img" />
+                </a>
+              </div> -->
             </div>
             <div class="col">
               <h2>Every Where On Any Device</h2>
