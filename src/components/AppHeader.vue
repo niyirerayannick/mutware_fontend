@@ -21,6 +21,8 @@
             type="search"
             placeholder="Search ...."
             aria-label="Search"
+            @keyup.enter="redirectToSearch"
+            v-model="searchQuery"
           />
           <span style="margin: 0 40px"></span>
           <form class="form-inline my-2 my-lg-0" v-if="user == null || user.username === 'Guest'">
@@ -44,12 +46,18 @@ export default {
     return {
       isNavigationOpen: false,
       isMobile: false,
+      searchQuery: '',
     };
   },
   created() {
     this.user = JSON.parse(localStorage.getItem('user'))
   },
   methods: {
+    redirectToSearch() {
+      if (this.searchQuery.trim() !== '') {
+        this.$router.push({ name: 'SearchPage', query: { search: this.searchQuery.trim() } });
+      }
+    },
     toggleNavigation() {
       this.isNavigationOpen = !this.isNavigationOpen;
     },

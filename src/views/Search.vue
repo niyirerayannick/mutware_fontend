@@ -73,20 +73,42 @@ export default {
   },
   mounted() {},
   created() {
-    this.get_videos_list()
+    this.getVideosList(this.$route.query.search);
+  },
+  watch: {
+    // Watch for changes in the search query and fetch new results
+    '$route.query.search'(newSearchQuery, oldSearchQuery) {
+      if (newSearchQuery !== oldSearchQuery) {
+        this.getVideosList(newSearchQuery);
+      }
+    },
   },
   methods: {
-    get_videos_list() {
-      axios
-        .get('http://backend.mutwarekidtv.xyz/videos/?format=json')
+    getVideosList(searchQuery) {
+      this.loading = true;
+      const apiUrl = `http://backend.mutwarekidtv.xyz/videos/?search=${searchQuery}&format=json`;
+
+      axios.get(apiUrl)
         .then((response) => {
-          this.videos_list = response.data
-          this.loading = false
+          this.videos_list = response.data;
+          this.loading = false;
         })
         .catch((error) => {
-          console.log(error)
-        })
+          console.error(error);
+          this.loading = false;
+        });
     },
+    // get_videos_list() {
+    //   axios
+    //     .get('http://backend.mutwarekidtv.xyz/videos/?format=json')
+    //     .then((response) => {
+    //       this.videos_list = response.data
+    //       this.loading = false
+    //     })
+    //     .catch((error) => {
+    //       console.log(error)
+    //     })
+    // },
     formatDate(dateString) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(dateString).toLocaleDateString(undefined, options)
