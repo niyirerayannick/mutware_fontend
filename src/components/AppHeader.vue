@@ -8,22 +8,19 @@
         <button
           class="navbar-toggler"
           type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          @click="toggleNavigation"
+          :aria-expanded="isNavigationOpen"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
         <span style="margin: 0 30px"></span>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+          <div class="collapse navbar-collapse" :class="{ 'show': isNavigationOpen }">
           <input
-            class="form-control mr-sm-2"
+            class="form-control mr-sm-2 search"
             type="search"
             placeholder="Search ...."
             aria-label="Search"
-            style="width: 50%; background-color: #fef2f2"
           />
           <span style="margin: 0 40px"></span>
           <form class="form-inline my-2 my-lg-0" v-if="!user">
@@ -44,10 +41,28 @@
 export default {
   name: 'AppHeader',
   data() {
-    return {}
+    return {
+      isNavigationOpen: false,
+      isMobile: false,
+    };
   },
   created() {
     this.user = JSON.parse(localStorage.getItem('user'))
+  },
+  methods: {
+    toggleNavigation() {
+      this.isNavigationOpen = !this.isNavigationOpen;
+    },
+    checkIfMobile() {
+      this.isMobile = window.innerWidth <= 768; 
+    },
+    mounted() {
+      this.checkIfMobile();
+      window.addEventListener('resize', this.checkIfMobile);
+    },
+    beforeDestroy() {
+      window.removeEventListener('resize', this.checkIfMobile);
+    },
   },
 }
 </script>
@@ -68,5 +83,18 @@ export default {
   font-size: 18px;
   font-weight: 600;
   color: #333;
+}
+.search{
+  background-color: #fef2f2;
+  width: 50%;
+}
+.navbar-toggler{
+  margin-left: 40%;
+}
+@media (max-width: 768px) {
+  .search{
+    background-color: #fef2f2;
+    width: 100%;
+  }
 }
 </style>

@@ -10,8 +10,6 @@
           <div class="category">{{ this.$route.params.category_name }}</div>
         </h1>
         <br />
-        <!-- <h4><b>Learning</b> is fun with engaging content!</h4>
-          <br /><br /> -->
         <div v-if="loading">
           <div class="skeleton-loader">
             <VideoListSkeleton />
@@ -36,10 +34,9 @@
                 <span class="play-icon play"><i class="fas fa-play"></i></span>
               </div>
               <div class="w-75">
-                <!-- Adjust the width as needed -->
                 <h4 class="mb-1">{{ video.title }}</h4>
                 <small>{{ formatDate(video.upload_date) }}</small>
-                <p class="mb-1">{{ video.description }}</p>
+                <p class="mb-1">{{ video.description }}</p> 
                 <small>{{ video.view_count }} views</small>
               </div>
             </div>
@@ -142,7 +139,7 @@ export default {
   border: 3px solid #ffffff;
   border-radius: 50%;
   animation-name: ripple;
-  animation-duration: 3s;
+  animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
   z-index: -1;
@@ -167,9 +164,11 @@ export default {
     transform: scale3d(1.5, 1.5, 1);
   }
 }
+
 .skeleton-loader {
   background-color: #ffffff;
   border-radius: 10px;
+  margin-bottom:  12px;
 }
 .h4,
 h4 {
@@ -187,5 +186,23 @@ h4 {
   font-size: 43px;
   font-weight: 800;
   font-style: 20px;
+}
+@media (max-width: 767px) {
+  .list-group-item {
+    flex-direction: column;
+  }
+
+  .img-listing {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .video-play-loader {
+    order: -1;
+    margin: 22% 35%; 
+  }
+  .d-flex {
+    display: grid!important;
+  }
 }
 </style>

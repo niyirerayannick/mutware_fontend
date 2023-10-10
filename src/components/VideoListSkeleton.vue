@@ -25,18 +25,18 @@
 </template>
 <style>
 .skeleton-box {
-  width: 100%;
+  width: 92%;
   height: 10.9em;
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite linear;
-  border-radius: 4px;
+  border-radius: 12px;
   margin-bottom: 10px;
   margin-top: 8px;
-  margin-left:  12px;
+  margin-left: 15px;
 }
 .skeleton-title {
-  width: 100%;
+  width: 92%;
   height: 2.2em;
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
@@ -44,16 +44,18 @@
   border-radius: 4px;
   margin-top: 8px;
   margin-bottom: 10px;
+  margin-left: 12px;
 }
 
 .skeleton-line {
-  width: 100%;
-  height: 1.2em;
+  width: 92%;
+  height: 0.5em;
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite linear;
   border-radius: 4px;
   margin-bottom: 10px;
+  margin-left: 12px;  
 }
 
 @keyframes shimmer {

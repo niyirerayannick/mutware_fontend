@@ -1,16 +1,21 @@
 <template>
   <div>
     <Header />
-    <section class="home-content">
-      <div class="container mt-4">
-        <img :src="require('@/assets/img/mutware_banner.png')" style="margin-left: 10%; margin-top: -5%; width: 50%" />
-        <br /><br />
-        <h1 class="text-center middle-title">
-          <b>LEARN</b> <span style="font-family: cursive; color: #ff7c3e">Through</span> <b>PLAY</b>
-        </h1>
+    <div class="custom-jumbotron">
+      <div class="overly"></div>
+      <div class="container">
+        <div style="margin-top: 5%;margin-left: 15%;">
+          <img :src="require('@/assets/img/mutware_banner.png')" style="margin-left: 10%; margin-top: -5%; width: 60%" />
+          <br /><br />
+          <h1 class="text-center middle-title">
+            <b>LEARN</b> <span>through</span> <b>PLAY</b>
+          </h1>
+        </div>
         <br />
-        <!-- <h4><b>Learning</b> is fun with engaging content!</h4>
-        <br /><br /> -->
+      </div>
+    </div>
+    <section class="video-list">
+      <div class="container mt-4">
         <div v-if="loading">
           <div class="skeleton-loader">
             <VideoListSkeleton />
@@ -35,10 +40,9 @@
                 <span class="play-icon play"><i class="fas fa-play"></i></span>
               </div>
               <div class="w-75">
-                <!-- Adjust the width as needed -->
                 <h4 class="mb-1">{{ video.title }}</h4>
                 <small>{{ formatDate(video.upload_date) }}</small>
-                <p class="mb-1">{{ video.description }}</p>
+                <p class="mb-1">{{ video.description }}</p> 
                 <small>{{ video.view_count }} views</small>
               </div>
             </div>
@@ -140,7 +144,7 @@ export default {
   border: 3px solid #ffffff;
   border-radius: 50%;
   animation-name: ripple;
-  animation-duration: 3s;
+  animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
   z-index: -1;
@@ -168,6 +172,7 @@ export default {
 .skeleton-loader {
   background-color: #ffffff;
   border-radius: 10px;
+  margin-bottom:  12px;
 }
 .h4,
 h4 {
@@ -178,4 +183,39 @@ h4 {
 .small {
   font-weight:700;
 }
+.middle-title {
+  margin-top: 1%;
+  font-family: 'Jockey One',;
+  font-weight: 400;
+  font-size: 48px;
+  color: #FFFDFD;
+  line-height: normal;
+}
+.middle-title span{
+  font-family: 'Abhaya Libre';
+}
+.video-list {
+  /*background-color: #fbf9f9;*/
+  /*margin-top: -4%;*/
+}
+
+@media (max-width: 767px) {
+  .list-group-item {
+    flex-direction: column;
+  }
+
+  .img-listing {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .video-play-loader {
+    order: -1;
+    margin: 22% 35%; 
+  }
+  .d-flex {
+    display: grid!important;
+  }
+}
+
 </style>

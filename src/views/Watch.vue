@@ -39,7 +39,7 @@
                 <div class="card">
                   <div class="card-body">
                     <router-link :to="'/watch/' + relatedVideo.id">
-                      <img :src="relatedVideo.banner" class="d-block w-100" alt="..." />
+                      <img :src="'http://backend.mutwarekidtv.xyz/' + relatedVideo.banner" class="d-block w-100" alt="..." />
                       <a :href="'/watch/' + relatedVideo.id" class="play-icon">
                         <i class="fas fa-play"></i>
                       </a>

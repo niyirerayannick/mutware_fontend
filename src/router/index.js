@@ -50,8 +50,16 @@ const router = createRouter({
     },
     {
       path: '/watch/:id',
-      name: 'WatchPage',
+      name: 'WatchVideo',
       component: () => import('../views/Watch.vue'),
+      beforeEnter: (to, from, next) => {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user !== null) {
+          next();
+        } else {
+          next({ path: '/restrict', query: { redirect: to.fullPath } });  
+        }
+      },
     },
     {
       path: '/category/:category_name',
