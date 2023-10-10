@@ -100,4 +100,50 @@ export default {
 .account {
   background-color: #12cca8;
 }
+
+
+.login {
+  background: #12cca8;
+  color: white;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  width: 100%;
+  max-width: 400px; 
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 auto; 
+  position: relative;
+  z-index: 2; 
+}
+
+.login-button {
+  color: #000;
+  background-color: #fef2f2;
+  border-color: #f3d5d5;
+  width: 100%;
+  max-width: 140px; 
+  margin-top: 10px; 
+}
+
+@media (min-width: 1024px) {
+  .login {
+    margin-left: 700px;
+  }
+}
+
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+  .login {
+    max-width: 100%; 
+    margin-top: 35%; 
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 40px; 
+  }
+}
+
 </style>

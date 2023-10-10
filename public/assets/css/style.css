@@ -220,18 +220,18 @@
 .navbar-brand{
   margin-left: 50px;
 }
-.login-button {
+/*.login-button {
   color: #000;
   background-color: #fef2f2;
   border-color: #f3d5d5;
   width: 140px;
-}
-.register-button {
+}*/
+/*.register-button {
   color: #fff;
   background-color: #12cca8;
   border-color: #12cca8;
   width: 140px;
-}
+}*/
 .play-text {
     margin-left: -42%;
     font-size: 29px;
@@ -240,7 +240,7 @@
 
 /*REGISTER AND LOGIN*/
 
-.register {
+/*.register {
   background: #12cca8;
   color: white;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
@@ -251,12 +251,21 @@
   margin-top: -75px;
    position: relative;
      z-index: 2; 
-}
+}*/
 .account {
   background: #12cca8;
   box-shadow : 2px 6px 8px 0 rgba(22, 22, 26, 0);
   border : 0px;
 }
+/*.register-container {
+  position: relative;
+  background-image: url('../img/IMG_6965.jpg');
+  background-size: cover; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 90px;
+  color: white; 
+}*/
 .register-container {
   position: relative;
   background-image: url('../img/IMG_6965.jpg');
@@ -297,7 +306,7 @@
 }
 
 
-.login {
+/*.login {
   background: #12cca8;
   color: white;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
@@ -305,10 +314,20 @@
   padding: 20px;
   border-radius: 10px;
   margin-left: 700px;
+  margin-left: 700px;
   margin-top: -75px;
   position: relative;
   z-index: 2; 
 }
+.login-container {
+  position: relative;
+  background-image: url('../img/IMG_6965.jpg');
+  background-size: cover; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 90px;
+  color: white; 
+}*/
 .login-container {
   position: relative;
   background-image: url('../img/IMG_6965.jpg');
