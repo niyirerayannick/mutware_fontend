@@ -32,7 +32,7 @@
           </form>
           <div class="user-profile" v-else>
             <img :src="require('@/assets/img/profile.jpg')" class="profile-img" />
-            <span class="profile-name">{{user.full_name}}</span>
+            <span class="profile-name">{{user.names}}</span>
           </div>
         </div>
       </nav>
@@ -50,7 +50,8 @@ export default {
     };
   },
   created() {
-    this.user = JSON.parse(localStorage.getItem('user'))
+    this.user = JSON.parse(localStorage.getItem('user'));
+    // alert(JSON.stringify(this.user))
   },
   methods: {
     redirectToSearch() {
@@ -84,6 +85,7 @@ export default {
   border-radius: 50%;
 }
 .profile-name {
+  width: 300%;
   position: absolute;
   bottom: -14px;
   left: 100%;
