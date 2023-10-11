@@ -6,9 +6,9 @@
           <div class="row">
             <div class="col">
               <a class="navbar-brand" href="#">
-                <img :src="require('@/assets/img/logo.png')" alt="Twitter Logo" style="width: 50%" /> </a
+                <img :src="require('@/assets/img/logo.png')" alt="Twitter Logo" style="width: 100%" /> </a
               ><br /><br />
-              <router-link to="/register" class="btn register-button my-2 my-sm-0" type="submit" style="width: 90%; height: 8vh;">Register Now</router-link><br><br>
+              <router-link to="/register" class="btn register-button my-2 my-sm-0" type="submit" style="width: 90%; height: 6vh;">Register Now</router-link><br><br>
               <div class="row">
                 <div class="col">
                   <a href="#"> <img :src="require('@/assets/img/google-play-badge.svg')" class="playstore-img" /> </a>
