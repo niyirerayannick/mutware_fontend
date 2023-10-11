@@ -52,7 +52,7 @@
         <h4>Lessons</h4>
       </router-link>
       <router-link to="/video-list" class="navbar-brand">
-        <h5>View All <i class="fa fa-chevron-down"></i></h5>
+        <h4>View All <i class="fa fa-chevron-down"></i></h4>
       </router-link>
     </div>
     <section class="lessons">
