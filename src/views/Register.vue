@@ -105,7 +105,7 @@ export default {
           full_name: this.parentFullName,
         }
         // Send a POST request to your API
-        const response = await axios.post('http://backend.mutwarekidtv.xyz/accounts/register/?format=json', userData)
+        const response = await axios.post('https://backend1.mutwarekidtv.xyz/accounts/register/?format=json', userData)
         console.log(response.data)
         this.responseMessage = 'Registration successful!'
         setTimeout(() => {

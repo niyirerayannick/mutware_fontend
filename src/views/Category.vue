@@ -35,7 +35,7 @@
             class="list-group-item list-group-item-action flex-column align-items-start"
           >
             <div class="d-flex w-100 justify-content-between">
-              <img :src="'http://backend.mutwarekidtv.xyz/' + video.banner" class="img-listing" alt="..." />
+              <img :src="video.banner" class="img-listing" alt="..." />
               <!-- <img :src="video.banner" class="img-listing" alt="..." /> -->
               <div class="video-play-loader">
                 <span class="play-icon play"><i class="fas fa-play"></i></span>
@@ -84,7 +84,7 @@ export default {
     async get_videos_list() {
       try {
         const category_name = this.$route.params.category_name
-        const response = await axios.get(`http://backend.mutwarekidtv.xyz/related/${category_name}/?format=json`)
+        const response = await axios.get(`https://backend1.mutwarekidtv.xyz/related/${category_name}/?format=json`)
         console.log('Response data:', response.data)
         this.videos_list = response.data
         this.loading = false

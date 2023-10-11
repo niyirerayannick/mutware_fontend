@@ -70,7 +70,7 @@ export default {
 
       try {
         // Send a POST request to change the password
-        const response = await axios.post('http://backend.mutwarekidtv.xyz/accounts/change-password/', requestData)
+        const response = await axios.post('https://backend1.mutwarekidtv.xyz/accounts/change-password/', requestData)
 
         console.log(response.data)
         alert('Password changed successfully!')

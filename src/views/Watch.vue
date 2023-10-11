@@ -39,7 +39,7 @@
                 <div class="card">
                   <div class="card-body">
                     <router-link :to="'/watch/' + relatedVideo.id">
-                      <img :src="'http://backend.mutwarekidtv.xyz/' + relatedVideo.banner" class="d-block w-100" alt="..." />
+                      <img :src="'https://backend1.mutwarekidtv.xyz/' + relatedVideo.banner" class="d-block w-100" alt="..." />
                       <a :href="'/watch/' + relatedVideo.id" class="play-icon">
                         <i class="fas fa-play"></i>
                       </a>
@@ -87,7 +87,7 @@ export default {
     async loadVideoDetails() {
       try {
         const videoId = this.$route.params.id
-        const response = await axios.get(`http://backend.mutwarekidtv.xyz/video/${videoId}/watch/`)
+        const response = await axios.get(`https://backend1.mutwarekidtv.xyz/video/${videoId}/watch/`)
         this.videoDetails = response.data.video_details;
         this.relatedVideos = response.data.related_videos;
         console.log(this.videoDetails)

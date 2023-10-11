@@ -190,7 +190,12 @@
           </div>
         </div>
         <div v-else>No videos available.</div>
-        <br><button class="button-73" role="button" style="margin-left:43%;">Explore More</button>
+        <center>
+          <router-link :to="'video-list'" class="button-73" role="button">
+            Explore More
+          </router-link>
+          <!-- <button class="button-73" role="button">Explore More</button> -->
+        </center>
       </div>
     </section>
     <!-- <div class="container"> -->
@@ -235,7 +240,7 @@
     methods: {
       get_videos_list() {
         axios
-          .get('http://backend.mutwarekidtv.xyz/videos/?format=json')
+          .get('https://backend1.mutwarekidtv.xyz/videos/?format=json')
           .then((response) => {
             this.videosList = response.data;
             this.loading = false;
@@ -418,7 +423,7 @@ h4 {
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: -.24px;
-  margin: 0;
+  margin: 0 auto;
   outline: none;
   padding: 1rem 1.3rem;
   quotes: auto;
@@ -430,10 +435,13 @@ h4 {
   touch-action: manipulation;
 }
 
+
 .button-73:hover {
     background-color: #12cca8;
     box-shadow: #94ecdc 0 -6px 8px inset;
     transform: scale(1.125);
+    text-decoration: none;
+    color: #fff;
 } 
 
 .button-73:active {
