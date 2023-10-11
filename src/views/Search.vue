@@ -16,6 +16,7 @@
     </div>
     <section class="video-list">
       <div class="container mt-4">
+        <h4>Search Result for: <b class="search">{{this.$route.query.search}}</b></h4><br>
         <div v-if="loading">
           <div class="skeleton-loader">
             <VideoListSkeleton />
@@ -49,7 +50,7 @@
             </div>
           </router-link>
         </div>
-        <div v-else><h3>No result found! Try another key word</h3></div><br><br><br>
+        <div v-else><center><h5>Ooops! No result found! Try another keyword</h5></center></div><br><br><br>
       </div>
     </section>
     <Footer />
@@ -81,7 +82,6 @@ export default {
     this.getVideosList(this.$route.query.search);
   },
   watch: {
-    // Watch for changes in the search query and fetch new results
     '$route.query.search'(newSearchQuery, oldSearchQuery) {
       if (newSearchQuery !== oldSearchQuery) {
         this.getVideosList(newSearchQuery);
@@ -96,6 +96,7 @@ export default {
       axios.get(apiUrl)
         .then((response) => {
           this.videos_list = response.data;
+          console.log(this.videos_list)
           this.loading = false;
         })
         .catch((error) => {
@@ -203,6 +204,9 @@ h4 {
   font-size: 1.5rem;
   font-family: 'Fredoka One', cursive;
   font-weight: 600;
+}
+.search {
+  color: #12cca8;
 }
 .small {
   font-weight:700;
