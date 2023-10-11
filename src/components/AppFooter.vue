@@ -5,7 +5,7 @@
         <div class="container mt-4">
           <div class="row">
             <div class="col">
-              <a class="navbar-brand" href="#">
+              <a href="#">
                 <img :src="require('@/assets/img/logo.png')" alt="Twitter Logo" style="width: 100%" /> </a
               ><br /><br />
               <router-link to="/register" class="btn register-button my-2 my-sm-0" type="submit" style="width: 90%; height: 6vh;">Register Now</router-link><br><br>
