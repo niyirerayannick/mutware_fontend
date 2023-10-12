@@ -46,6 +46,11 @@
           <!-- </div> -->
         </div>
       <!-- </div> -->
+      <center>
+        <router-link :to="'video-list'" class="button-73" role="button">
+          Explore More
+        </router-link>
+      </center><br>
     </div>
     <Footer />
   </div>
