@@ -112,7 +112,7 @@
                 <div class="col-md-6">
                   <div class="card">
                     <div class="card-body">
-                      <img :src="require('@/assets/img/alphabestkids-01.png')" class="d-block w-100" alt="..." />
+                      <img :src="require('@/assets/img/puzzle-01.jpg')" class="d-block w-100" alt="..." />
                       <a href="#" class="play-icon">
                         <i class="fas fa-play"></i>
                       </a>
@@ -132,7 +132,7 @@
                 <div class="col-md-6">
                   <div class="card">
                     <div class="card-body">
-                      <img :src="require('@/assets/img/alphabestkids-01.png')" class="d-block w-100" alt="..." />
+                      <img :src="require('@/assets/img/muhouse-01.png')" class="d-block w-100" alt="..." />
                       <a href="#" class="play-icon">
                         <i class="fas fa-play"></i>
                       </a>
