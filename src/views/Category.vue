@@ -4,14 +4,22 @@
     <div class="custom-jumbotron">
       <div class="overly"></div>
       <div class="container">
-        <div style="margin-top: 5%;margin-left: 15%;">
-          <img :src="require('@/assets/img/mutware_banner.png')" style="margin-left: 10%; margin-top: -5%; width: 60%" />
-          <br /><br />
-          <h1 class="text-center middle-title">
-            <b>LEARN</b> <span>through</span> <b>PLAY</b>
-          </h1>
+        <div class="page-title">
+          <h2 class="breadcrumb-title">
+            <span class="reduce-space">Welcome</span>
+            <span class="reduce-space">kids,</span>
+            <span class="reduce-space">let</span>
+            <span class="reduce-space">us</span>
+            <span class="reduce-space">sing</span><br>
+            <span class="reduce-space">together</span>  
+          </h2>
         </div>
         <br />
+        <div class="breadcrumb-txt nav-link">
+          <router-link :to="'/'" class="navigation">Home</router-link>
+          <span class="dvdr"> / </span>
+          <span>Welcome To ...</span>
+        </div>
       </div>
     </div>
     <section class="video-list">
@@ -181,6 +189,7 @@ h4 {
   font-size: 1.5rem;
   font-family: 'Fredoka One', cursive;
   font-weight: 600;
+  margin-left :0px;
 }
 .small {
   font-weight:700;
@@ -218,6 +227,36 @@ h4 {
   .d-flex {
     display: grid!important;
   }
+  .breadcrumb-title {
+      font-size: 30px;
+  }
+  .page-title{
+    margin-top: 80px;
+  }
 }
-
+@media (min-width: 768px) {
+  .breadcrumb-title {
+    font-size: 65px;
+    margin-top: -3%;
+  }
+  .page-title{
+    margin-top: 80px;
+  }
+}
+.breadcrumb-title {
+  margin-top: -3%;
+  /*font-size: 65px;*/
+  line-height: 1.2;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 15px;
+  letter-spacing: -2px;
+}
+.reduce-space {
+  margin-left: 18px; 
+  margin-right: -5px; 
+}
+h2{
+  font-family: "Fredoka One", cursive;
+} 
 </style>

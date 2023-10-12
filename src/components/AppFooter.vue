@@ -31,9 +31,9 @@
               <p>Get MUTWARE KID TV on your device downoald the App and start restricting for <b>FREE</b> TO DAY</p>
             </div>
             <div class="col">
-              <a href="stream.html">
+              <router-link to="/stream">
                 <img :src="require('@/assets/img/live-stream.png')" class="live-streaming-img" />
-              </a>
+              </router-link>
               <h2>Join Our <b>Live</b> session here</h2>
             </div>
           </div>

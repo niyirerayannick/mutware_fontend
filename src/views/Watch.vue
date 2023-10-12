@@ -8,7 +8,6 @@
             <div v-if="!isVideoPlaying" class="request-loader" @click="playVideo">
               <span class="play-icon play"><i class="fas fa-play"></i></span>
             </div>
-            <!-- <video id="myVideo" class="img-fluid" controls> -->
             <video id="myVideo" ref="videoPlayer" class="img-fluid" controls @play="handlePlay" @pause="handlePause">
               <source :src="videoDetails.video_file" type="video/mp4" />
               Your browser does not support the video tag.
@@ -17,33 +16,28 @@
         </div>
         <div class="col-md-4">
           <div class="card mb-3">
-            <div class="card-body">
+            <div class="card-body content-desc">
               <h5 class="card-title">{{ videoDetails.title }}</h5>
-              <p class="card-text">{{ videoDetails.description }}</p>
-              <p class="card-text">
-                <b>{{ videoDetails.view_count }} View</b>
-              </p>
-              <p>Upload Date: {{ formatDate(videoDetails.upload_date) }}</p>
-              <img :src="videoDetails.banner" class="d-block w-100" alt="..." />
+              <p class="card-text">{{ videoDetails.description }} </p>
+              <img :src="videoDetails.banner" class="d-block w-100 banner" alt="..." />
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
+      </div><br><br>
+      <!-- <div class="row"> -->
         <h2>Related Videos</h2>
         <div class="carousel">
-          <!-- <div class="carousel-inner home-card-slide"> -->
           <div class="row">
             <div v-for="relatedVideo in relatedVideos" :key="relatedVideo.id" class="col-md-3">
               <div class="carousel-item active">
                 <div class="card">
                   <div class="card-body">
-                    <router-link :to="'/watch/' + relatedVideo.id">
-                      <img :src="'https://backend1.mutwarekidtv.xyz/' + relatedVideo.banner" class="d-block w-100" alt="..." />
+                    <a :href="'/watch/' + relatedVideo.id">
+                      <img :src="'https://backend1.mutwarekidtv.xyz/' + relatedVideo.banner" class="d-block w-100 related-video"  alt="..." />
                       <a :href="'/watch/' + relatedVideo.id" class="play-icon">
                         <i class="fas fa-play"></i>
                       </a>
-                    </router-link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -51,7 +45,7 @@
           </div>
           <!-- </div> -->
         </div>
-      </div>
+      <!-- </div> -->
     </div>
     <Footer />
   </div>
@@ -83,10 +77,14 @@ export default {
     this.loadVideoDetails();
     this.playVideo();
   },
+  beforeRouteUpdate(to, from, next) {
+    this.loadVideoDetails(); 
+    next();
+  },
   methods: {
     async loadVideoDetails() {
       try {
-        const videoId = this.$route.params.id
+        const videoId = this.$route.params.id;
         const response = await axios.get(`https://backend1.mutwarekidtv.xyz/video/${videoId}/watch/`)
         this.videoDetails = response.data.video_details;
         this.relatedVideos = response.data.related_videos;
@@ -164,9 +162,30 @@ input[type='range'] {
   position: relative;
   display: inline-block;
 }
+
 .card {
   background-color: #f7f7f7;
+  border-radius: 15px;
 }
+.card-body img{
+  border-radius: 10px;
+}
+.card-body {
+  padding: 0.7rem;
+  max-height: 96%;
+  overflow: hidden;
+  position: relative;
+}
+.content-desc{
+  height: 64vh;
+}
+.banner {
+  height: 33vh;
+}
+.related-video{
+  height: 26vh;
+}
+
 .img-fluid {
   width: 100%;
 }

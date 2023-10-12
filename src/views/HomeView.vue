@@ -22,9 +22,9 @@
                     :class="{ 'carousel-item': true, active: isActive(index) }"
                   >
                   <div class="card">
-                    <div class="card-body">
+                    <div class="card-body my-card">
                       <router-link :to="'/watch/' + video.id">
-                        <img :src="video.banner" class="d-block w-100" alt="..." />
+                        <img :src="video.banner" class="d-block w-100" style="height: 23.5vh;" alt="..." />
                         <div class="video-play-loaders">
                           <span class="play-icon play"><i class="fas fa-play"></i></span>
                         </div>
@@ -304,6 +304,11 @@ h4 {
   overflow: hidden;
   position: relative;
 }
+
+/* Specific styles for your carousel cards */
+
+
+
 @media (max-width: 576px) {
   .carousel-inner .carousel-item {
     display: flex;

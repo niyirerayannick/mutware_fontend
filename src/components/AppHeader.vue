@@ -26,7 +26,10 @@
           />
           <span style="margin: 0 40px"></span>
           <form class="form-inline my-2 my-lg-0" v-if="user == null || user.username === 'Guest'">
-            <router-link to="/register" class="btn register-button my-2 my-sm-0" type="submit">Register</router-link>
+            <router-link to="/register" class="btn register-button my-2 my-sm-0" type="submit">
+              <span class="button-text">Register</span>
+              <div class="sliding-background"></div>
+            </router-link>
             <span style="margin: 0 20px"></span>
             <router-link to="/login" class="btn login-button my-2 my-sm-0" type="submit">Sign In</router-link>
           </form>
@@ -105,6 +108,35 @@ export default {
   .search{
     background-color: #fef2f2;
     width: 100%;
+  }
+}
+
+
+.register-button {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+.button-text {
+  position: relative;
+  z-index: 2; 
+}
+
+.sliding-background {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%; 
+  height: 100%;
+  background: linear-gradient(to right, #12cca8, #83ead6, #12cca8); 
+  animation: slideEffect 2s infinite linear; 
+  z-index: 1; 
+}
+
+@keyframes slideEffect {
+  to {
+    left: 100%;
   }
 }
 </style>
