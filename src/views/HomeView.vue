@@ -283,10 +283,13 @@
   display: block;
 }
 .h4,
+h4.learn{
+  font-size: 1.8rem;
+}
 h4 {
   margin-top : 3%;
   margin-left: 3%;
-  font-size: 1.8rem;
+  /*font-size: 1.8rem;*/
   font-family: 'Jockey One', sans-serif;
 }
 .carousel-control-prev, .carousel-control-next{

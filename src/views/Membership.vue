@@ -172,7 +172,7 @@ section.pricing {
   opacity: 0.7;
   transition: all 0.2s;
 }
-h2 {
+/*h2 {
   font-family: 'Fredoka One', cursive;
   font-weight: 800;
   font-size: 38px;
@@ -181,7 +181,7 @@ h4 {
   color: #15a27e;
   font-weight: 700;
   font-family: 'Fredoka One', cursive;
-}
+}*/
 .payment {
   background-color: #fff8f8;
   text-align: center;

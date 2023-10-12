@@ -33,7 +33,11 @@
             <span style="margin: 0 20px"></span>
             <router-link to="/login" class="btn login-button my-2 my-sm-0" type="submit">Sign In</router-link>
           </form>
-          <div class="user-profile" v-else>
+          <div v-else>
+            <router-link to="/membership" class="btn register-button my-2 my-sm-0 membership" type="submit">
+              <span class="button-text"><b>Unlock Premium Content</b> </span>
+              <div class="sliding-background"></div>
+            </router-link>
             <img :src="require('@/assets/img/profile.jpg')" class="profile-img" />
             <span class="profile-name">{{user.names}}</span>
           </div>
@@ -80,12 +84,12 @@ export default {
 </script>
 <style>
 .user-profile {
-  margin-left: 325px;
-  position: relative;
+  margin-left: 175px;
 }
 .profile-img {
   height: 55px;
   border-radius: 50%;
+  margin-left: 175px;
 }
 .profile-name {
   width: 300%;
@@ -116,6 +120,9 @@ export default {
   overflow: hidden;
   position: relative;
   display: inline-block;
+}
+.membership{
+  width: 200px;
 }
 
 .button-text {
