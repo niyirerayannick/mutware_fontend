@@ -75,7 +75,7 @@
                 </div>
                 <div class="col-md-6">
                   <h5 class="card-title"><b>Numbers</b></h5>
-                  <p>The show is centered on a group of puppies led by an adult mentor named</p>
+                  <p>Educational animations and music lessons can make learning fun and engaging, leading to effective learning and the development of a lifelong love of learning in children.</p>
                 </div>
               </div>
             </div>

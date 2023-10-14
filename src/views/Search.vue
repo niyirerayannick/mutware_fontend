@@ -51,9 +51,9 @@
               </div>
               <div class="w-75">
                 <h4 class="mb-1">{{ video.title }}</h4>
-                <small>{{ formatDate(video.upload_date) }}</small>
+                <!-- <small>{{ formatDate(video.upload_date) }}</small> -->
                 <p class="mb-1">{{ video.description }}</p> 
-                <small>{{ video.view_count }} views</small>
+                <!-- <small>{{ video.view_count }} views</small> -->
               </div>
             </div>
           </router-link>
