@@ -18,7 +18,7 @@
         <div class="breadcrumb-txt nav-link">
           <router-link :to="'/'" class="navigation">Home</router-link>
           <span class="dvdr"> / </span>
-          <span>Welcome To ...</span>
+          <span>Enjoy lessons for kids</span>
         </div>
       </div>
     </div>

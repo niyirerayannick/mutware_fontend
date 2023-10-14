@@ -75,7 +75,7 @@
                 </div>
                 <div class="col-md-6">
                   <h5 class="card-title"><b>Numbers</b></h5>
-                  <p>Educational animations and music lessons can make learning fun and engaging, leading to effective learning and the development of a lifelong love of learning in children.</p>
+                  <p>Educational animations and music lessons make learning fun and engaging for school children</p>
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@
                 </div>
                 <div class="col-md-6">
                   <h5 class="card-title">My Home</h5>
-                  <p>The show is centered on a group of puppies led by an adult mentor named.</p>
+                  <p>Educational animations and music lessons make learning fun and engaging for school children</p>
                 </div>
               </div>
             </div>
@@ -119,7 +119,7 @@
                 </div>
                 <div class="col-md-6">
                   <h5 class="card-title">Alphabets</h5>
-                  <p>The show is centered on a group of puppies led by an adult mentor named.</p>
+                  <p>Educational animations and music lessons make learning fun and engaging for school children</p>
                 </div>
               </div>
             </div>
@@ -140,8 +140,8 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <h5 class="card-title">M Family</h5>
-                  <p>The show is centered on a group of puppies led by an adult mentor named.</p>
+                  <h5 class="card-title">My Family</h5>
+                  <p>Educational animations and music lessons make learning fun and engaging for school children</p>
                 </div>
               </div>
             </div>
