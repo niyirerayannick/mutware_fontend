@@ -1,4 +1,4 @@
-<template>
+e<template>
   <div style="background-color:#eeeeee;">
     <Header />
     <div class="container mt-5">
@@ -47,9 +47,16 @@
         </div>
       <!-- </div> -->
       <center>
-        <router-link :to="'video-list'" class="button-73" role="button">
+        <!-- <router-link :to="'/video-list'" class="button-73" role="button">
           Explore More
-        </router-link>
+        </router-link> -->
+        <div class="item button-typewriter" style="--bg-color: #e74c3c">
+          <div class="button__wrapper">
+            <router-link :to="'video-list'" class="explore-button" role="button">
+              <p>Explore More</p>
+            </router-link>
+          </div>
+        </div>
       </center><br>
     </div>
     <Footer />

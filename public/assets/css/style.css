@@ -227,12 +227,12 @@
 .navbar-brand{
   margin-left: 50px;
 }
-.login-button {
+/*.login-button {
   color: #000;
   background-color: #fef2f2;
   border-color: #f3d5d5;
   width: 140px;
-}
+}*/
 .register-button {
   color: #fff;
   background-color: #12cca8;
@@ -432,4 +432,364 @@ a{
 
 .button-73:active {
   transform: scale(1.025);
+}
+
+
+
+
+
+
+
+.button-pulse *:before,
+.button-pulse *:after {
+    content: "";
+    position: absolute;
+}
+
+/**:before, *:after {
+  content: "";
+  position: absolute;
+}
+* {
+  box-sizing: border-box;
+}*/
+
+
+/*button {
+  background: transparent;.button-pulse .waving-button
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  font: 24px "Margarine", sans-serif;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  letter-spacing: 2px;
+}*/
+.waving-button {
+  background: transparent;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  font: 24px "Margarine", sans-serif;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  letter-spacing: 2px;
+}
+a.waving-button {
+  text-decoration: none;
+  text-align: center;
+  font-weight: 800;
+}
+.waving-button:hover{
+  color: #fff;
+}
+
+.login-button {
+  background-color: #f4b1b1;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  font: 15px "Margarine", sans-serif;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  letter-spacing: 2px;
+}
+
+.explore-button {
+  background: transparent;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  font: 24px "Margarine", sans-serif;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  letter-spacing: 2px;
+}
+.premium-button {
+  background: transparent;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  font: 24px "Margarine", sans-serif;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  letter-spacing: 2px;
+}
+
+/*.name {
+  width: 100%;
+  text-align: center;
+  padding: 0 0 3rem;
+  font: 500 14px 'Rubik', sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+*/
+  .button__wrapper {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*.button-pulse button {
+    background: var(--bg-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }*/
+  .button-pulse .waving-button {
+    background-color: #12cca8;
+    width: 85%;
+    height: 85%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    font-size :15px;
+  }
+
+  .button-pulse .button__wrapper:hover .pulsing:before {
+    animation: pulsing 0.2s linear infinite;
+  }
+
+  .button-pulse .button__wrapper:hover .pulsing:after {
+    animation: pulsing1 0.2s linear infinite;
+  }
+
+  .pulsing {
+    width: 99%;
+    height: 99%;
+    border-radius: 50px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .pulsing:before,
+  .pulsing:after {
+    width: 85%;
+    height: 85%;
+    border: inherit;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: #c3f7ee;
+    border-radius: inherit;
+    animation: pulsing 2s linear infinite;
+  }
+
+  .pulsing:after {
+    animation: pulsing1 2.5s linear infinite;
+  }
+
+  @keyframes pulsing {
+    0% {
+      opacity: 1;
+      transform: scaleY(1) scaleX(1);
+    }
+    20% {
+      opacity: 0.5;
+    }
+    70% {
+      opacity: 0.2;
+      transform: scaleY(1.8) scaleX(1.4);
+    }
+    80% {
+      opacity: 0;
+      transform: scaleY(1.8) scaleX(1.4);
+    }
+    90% {
+      opacity: 0;
+      transform: scaleY(1) scaleX(1);
+    }
+  }
+
+  @keyframes pulsing1 {
+    0% {
+      opacity: 1;
+      transform: scaleY(1) scaleX(1);
+    }
+    20% {
+      opacity: 0.5;
+    }
+    70% {
+      opacity: 0.2;
+      transform: scaleY(1.3) scaleX(1.15);
+    }
+    80% {
+      opacity: 0;
+      transform: scaleY(1.3) scaleX(1.15);
+    }
+    90% {
+      opacity: 0;
+      transform: scaleY(1) scaleX(1);
+    }
+  }
+
+  .button-typewriter .explore-button {
+    width: 100%;
+    height: 100%;
+    background-color: #12cca8;
+  }
+  .button-typewriter .premium-button {
+    width: 100%;
+    height: 100%;
+    background-color: #12cca8;
+    margin-top :22%;
+  }
+
+  .button-typewriter p {
+    animation: typing 4s steps(12) infinite;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 4%;
+  }
+
+  .button-typewriter .button__wrapper:hover p {
+    animation: blink 0.3s infinite;
+  }
+
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+    55%,
+    65%,
+    75% {
+      opacity: 1;
+    }
+    60%,
+    70% {
+      opacity: 0;
+    }
+    80% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+
+  .button-parrot .parrot {
+    position: absolute;
+    width: 60px;
+    text-align: center;
+    animation: blink 0.8s infinite;
+    color: transparent;
+  }
+
+  .button-parrot .parrot:before {
+    content: "Click Me!";
+  }
+
+  .button-parrot .parrot:nth-child(1) {
+    top: -30px;
+    left: -40px;
+    font: 12px/1 "Margarine", sans-serif;
+    transform: rotate(-20deg);
+    animation-duration: 0.5s;
+  }
+
+  .button-parrot .parrot:nth-child(2) {
+    font: 12px/1 "Margarine", sans-serif;
+    right: -40px;
+    top: -20px;
+    transform: rotate(15deg);
+    animation-duration: 0.3s;
+  }
+
+  .button-parrot .parrot:nth-child(3) {
+    font: 16px/1 "Margarine", sans-serif;
+    top: -60px;
+    left: 15px;
+    transform: rotate(10deg);
+    animation-duration: 1s;
+  }
+
+  .button-parrot .parrot:nth-child(4) {
+    font: 18px/1 "Margarine", sans-serif;
+    top: -70px;
+    left: 95px;
+    transform: rotate(2deg);
+    animation-duration: 0.7s;
+  }
+
+  .button-parrot .parrot:nth-child(5) {
+    font: 14px/1 "Margarine", sans-serif;
+    top: 80px;
+    left: 105px;
+    transform: rotate(-20deg);
+    animation-duration: 0.8s;
+  }
+
+  .button-parrot .parrot:nth-child(6) {
+    font: 12px/1 "Margarine", sans-serif;
+    top: 80px;
+    left: 5px;
+    transform: rotate(10deg);
+    animation-duration: 1.2s;
+  }
+}
+
+.button-parrot button:hover .parrot:before {
+  content: "Do it!";
+  width: 70px;
+}
+
+
+
+@keyframes rotate-nonstop {
+  50% {
+    transform: rotate(92deg);
+  }
+}
+
+@keyframes heartbeat {
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+
+@keyframes rotate-nonstop {
+  50% {
+    transform: rotate(92deg);
+  }
+}
+
+@keyframes omg-yes {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: -50px;
+  }
 }

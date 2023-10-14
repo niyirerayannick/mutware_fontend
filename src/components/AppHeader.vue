@@ -26,18 +26,31 @@
           />
           <span style="margin: 0 40px"></span>
           <form class="form-inline my-2 my-lg-0" v-if="user == null || user.username === 'Guest'">
-            <router-link to="/register" class="btn register-button my-2 my-sm-0" type="submit">
+            <!-- <router-link to="/register" class="btn register-button my-2 my-sm-0" type="submit">
               <span class="button-text">Register</span>
               <div class="sliding-background"></div>
-            </router-link>
+            </router-link> -->
+            <div class="item button-pulse" style="--bg-color: #e67e22">
+              <div class="button__wrapper">
+                <div class="pulsing"></div>
+                <router-link to="/register" class="waving-button" type="submit">Register</router-link>
+              </div>
+            </div>
             <span style="margin: 0 20px"></span>
-            <router-link to="/login" class="btn login-button my-2 my-sm-0" type="submit">Sign In</router-link>
+            <router-link to="/login" class="btn login-button my-2 my-sm-0" type="submit"><b>Sign In</b></router-link>
           </form>
-          <div v-else>
-            <router-link to="/membership" class="btn register-button my-2 my-sm-0 membership" type="submit">
-              <span class="button-text"><b>Unlock Premium Content</b> </span>
+          <div v-else style="margin-top:-2%">
+            <!-- <router-link to="/membership" class="btn register-button my-2 my-sm-0 membership" type="submit">
+              <span class="button-text"><b>Unlock Premium</b> </span>
               <div class="sliding-background"></div>
-            </router-link>
+            </router-link> -->
+           <div class="item button-typewriter writter" style="--bg-color: #e74c3c">
+            <div class="button__wrapper">
+              <router-link :to="'/membership'" class="premium-button" role="button">
+                <p class="premium-text"><b>Unlock Premium</b></p>
+              </router-link>
+            </div>
+          </div>
             <img :src="require('@/assets/img/profile.jpg')" class="profile-img" />
             <span class="profile-name">{{user.names}}</span>
           </div>
@@ -87,9 +100,10 @@ export default {
   margin-left: 175px;
 }
 .profile-img {
-  height: 55px;
-  border-radius: 50%;
-  margin-left: 175px;
+    height: 55px;
+    border-radius: 50%;
+    margin-left: 170%;
+    margin-top: -23%;
 }
 .profile-name {
   width: 300%;
@@ -106,7 +120,7 @@ export default {
   width: 50%;
 }
 .navbar-toggler{
-  margin-left: 40%;
+  margin-left: 35%;
 }
 @media (max-width: 768px) {
   .search{
@@ -145,5 +159,15 @@ export default {
   to {
     left: 100%;
   }
+}
+.premium-button{
+  height: 80%!important;
+
+}
+.premium-text {
+  font-size: 13px !important;
+}
+.writter p{
+  margin-top: 2%;
 }
 </style>

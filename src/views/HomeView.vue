@@ -191,11 +191,18 @@
         </div>
         <div v-else>No videos available.</div>
         <center>
-          <router-link :to="'video-list'" class="button-73" role="button">
+          <!-- <router-link :to="'video-list'" class="button-73" role="button">
             Explore More
-          </router-link>
-          <!-- <button class="button-73" role="button">Explore More</button> -->
+          </router-link> -->
+          <div class="item button-typewriter" style="--bg-color: #e74c3c">
+            <div class="button__wrapper">
+              <router-link :to="'video-list'" class="explore-button" role="button">
+                <p>Explore More</p>
+              </router-link>
+            </div>
+          </div>
         </center>
+        
       </div>
     </section>
     <!-- <div class="container"> -->
@@ -454,6 +461,9 @@ h4 {
 
 .button-73:active {
   transform: scale(1.025);
+}
+.explore-button{
+  margin-top : 18%
 }
   
 
