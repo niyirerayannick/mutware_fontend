@@ -113,11 +113,19 @@ export default {
           this.$router.push({ name: 'LoginPage' })
         }, 2000)
         this.loading = false
-      } catch (error) {
-        console.error('Error during registration:', error)
-        alert('Error during registration. Please try again.')
-        this.loading = false
-      }
+        } catch (error) {
+          console.error(error.response.data);
+          this.loading = false;
+          if (error.response.data.email && error.response.data.telephone) {
+            this.responseMessage = "Email and Phone Number are already taken.";
+          } else if (error.response.data.email) {
+            this.responseMessage = "Email is already taken.";
+          } else if (error.response.data.telephone) {
+            this.responseMessage = "This Phone is already taken.";
+          } else {
+            this.responseMessage = "An error occurred. Please try again.";
+          }
+        }
     },
     clearResponseMessage() {
       this.responseMessage = null
@@ -147,15 +155,6 @@ export default {
   position: relative;
   z-index: 2; 
 }
-
-/*.register-button {
-  color: #000;
-  background-color: #fef2f2;
-  border-color: #f3d5d5;
-  width: 100%;
-  max-width: 140px; 
-  margin-top: 10px; 
-}*/
 
 @media (min-width: 1024px) {
   .register {

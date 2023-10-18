@@ -107,7 +107,7 @@
               <div class="row">
                 <div class="col-md-6 categories">
                   <div class="card">
-                    <div class="card-body">
+                    <div class="card-body"> 
                       <router-link :to="'/category/alphabetic'">
                         <img :src="require('@/assets/img/alphabestkids-01.png')" class="d-block w-100" alt="..." />
                         <div class="video-play-loaders">

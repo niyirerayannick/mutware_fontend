@@ -50,10 +50,12 @@
                 <span class="play-icon play"><i class="fas fa-play"></i></span>
               </div>
               <div class="w-75">
-                <h4 class="mb-1">{{ video.title }}</h4>
-                <!-- <small>{{ formatDate(video.upload_date) }}</small> -->
-                <p class="mb-1">{{ video.description }}</p> 
-                <!-- <small>{{ video.view_count }} views</small> -->
+                <div class="description-list">
+                  <h4 class="mb-1">{{ video.title }}</h4>
+                  <!-- <small>{{ formatDate(video.upload_date) }}</small> -->
+                  <p class="mb-1">{{ video.description }}</p> 
+                  <!-- <small>{{ video.view_count }} views</small> -->
+                </div>
               </div>
             </div>
           </router-link>

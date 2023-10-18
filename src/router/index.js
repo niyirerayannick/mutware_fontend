@@ -71,6 +71,16 @@ const router = createRouter({
       name: 'SearchPage',
       component: () => import('../views/Search.vue'),
     },
+    {
+      path: '/404',
+      name: '404Page',
+      component: () => import('../views/404Page.vue'),
+    },
+    {
+      path: '/:catchAll(.*)',
+      name: 'NotFound',
+      component: () => import('../views/404Page.vue'),
+    },
   ],
 })
 

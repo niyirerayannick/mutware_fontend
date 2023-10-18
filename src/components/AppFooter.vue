@@ -57,13 +57,21 @@
               <h2>SOCIAL MEDIA</h2>
               <h5>Mutware Educate</h5>
               <!-- Twitter -->
-              <img :src="require('@/assets/logo/Twitter.webp')" alt="Twitter Logo" style="width: 12%" />
+              <a href="https://twitter.com/educate_mutware" target="_blank">
+                <img :src="require('@/assets/logo/Twitter.webp')" alt="Twitter Logo" style="width: 12%" />
+              </a>
               <!-- Instagram -->
-              <img :src="require('@/assets/logo/instagram.png')" alt="Instagram Logo" style="width: 12%" />
+              <a href="https://www.instagram.com/mutwareducate/" target="_blank">
+                <img :src="require('@/assets/logo/instagram.png')" alt="Instagram Logo" style="width: 12%" />
+              </a>
               <!--  Facebooks-->
-              <img :src="require('@/assets/logo/facebook.png')" alt="Instagram Logo" style="width: 12%" /><br />
+              <a href="https://www.facebook.com/people/Mutware-Educate/100080245643472/" target="_blank">
+                <img :src="require('@/assets/logo/facebook.png')" alt="Instagram Logo" style="width: 12%" /><br />
+              </a>
               <!-- Youtube -->
-              <img :src="require('@/assets/logo/youtube.png')" alt="Instagram Logo" style="width: 44%" />
+              <a href="https://www.youtube.com/channel/UCTD8XGuLRkWrLSI-Ffj9Iaw" target="_blank">
+                <img :src="require('@/assets/logo/youtube.png')" alt="Instagram Logo" style="width: 44%" />
+              </a>
             </div>
           </div>
         </div>
