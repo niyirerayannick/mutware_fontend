@@ -229,6 +229,7 @@ h4 {
   }
   .breadcrumb-title {
       font-size: 30px;
+      font-family: "Fredoka One", cursive;
   }
   .page-title{
     margin-top: 80px;
@@ -251,13 +252,14 @@ h4 {
   color: #fff;
   margin-bottom: 15px;
   letter-spacing: -2px;
+  font-family: "Fredoka One", cursive;
 }
 .reduce-space {
   margin-left: 18px; 
   margin-right: -5px; 
 }
-h2{
+/*h2{
   font-family: "Fredoka One", cursive;
-} 
+}*/ 
 
 </style>

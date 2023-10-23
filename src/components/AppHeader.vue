@@ -51,8 +51,19 @@
               </router-link>
             </div>
           </div>
-            <img :src="require('@/assets/img/profile.jpg')" class="profile-img" />
-            <span class="profile-name">{{user.names}}</span>
+            <div class="dropdown" @click="toggleDropdown" ref="dropdown">
+              <img
+                :src="require('@/assets/img/profile.jpg')"
+                alt="Profile Image"
+                class="profile-img"
+              />
+              <div class="dropdown-menu" :class="{ show: isDropdownOpen }">
+                <router-link :to="'/profile'" class="dropdown-item">Profile</router-link>
+                <a class="dropdown-item" href="#" @click="logout">Log Out</a>
+              </div>
+            </div>
+            <!-- <img :src="require('@/assets/img/profile.jpg')" class="profile-img" /> -->
+            <!-- <span class="profile-name">{{user.names}}</span> -->
           </div>
         </div>
       </nav>
@@ -67,11 +78,11 @@ export default {
       isNavigationOpen: false,
       isMobile: false,
       searchQuery: '',
+      isDropdownOpen: false,
     };
   },
   created() {
     this.user = JSON.parse(localStorage.getItem('user'));
-    // alert(JSON.stringify(this.user))
   },
   methods: {
     redirectToSearch() {
@@ -92,7 +103,26 @@ export default {
     beforeDestroy() {
       window.removeEventListener('resize', this.checkIfMobile);
     },
-  },
+    toggleDropdown() {
+      this.isDropdownOpen = !this.isDropdownOpen;
+      if (this.isDropdownOpen) {
+        document.addEventListener('click', this.closeDropdownOnClickOutside);
+      } else {
+        document.removeEventListener('click', this.closeDropdownOnClickOutside);
+      }
+    },
+    closeDropdownOnClickOutside(event) {
+      if (!this.$refs.dropdown.contains(event.target)) {
+        this.isDropdownOpen = false;
+        document.removeEventListener('click', this.closeDropdownOnClickOutside);
+      }
+    },
+    logout() {
+      localStorage.removeItem("user");
+      localStorage.removeItem("token");
+      window.location.href = "/";
+    },
+},
 }
 </script>
 <style>
@@ -104,9 +134,10 @@ export default {
     border-radius: 50%;
     margin-left: 170%;
     margin-top: -23%;
+    cursor: pointer;
 }
 .profile-name {
-  width: 300%;
+  /*width: 300%;*/
   position: absolute;
   bottom: -14px;
   left: 100%;
@@ -126,6 +157,25 @@ export default {
   .search{
     background-color: #fef2f2;
     width: 100%;
+  }
+  .profile-img {
+    border-radius: 50%;
+    margin-left: 80%;
+    margin-top : -54px;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .search{
+    background-color: #fef2f2;
+    width: 80%;
+  }
+  .profile-img {
+    border-radius: 50%;
+    margin-left: 80%;
+    margin-top : -54px;
+    cursor: pointer;
   }
 }
 
@@ -169,5 +219,12 @@ export default {
 }
 .writter p{
   margin-top: 2%;
+}
+.dropdown-menu {
+  display: none;
+  margin-left: 100%;
+}
+.show {
+  display: block;
 }
 </style>

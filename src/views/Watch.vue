@@ -69,7 +69,7 @@
       <div v-if="isModalVisible" class="custom-modal">
         <div class="modal-content">
           <span class="close" @click="closeModal">&times;</span>
-          <h4>Thanks for visiting Mutware Kid TV, you are welcome but you are in guest mode, REGISTER to continue!!</h4><br>
+          <h4 class="watch-message">Thanks for visiting Mutware Kid TV, you are welcome but you are in guest mode, REGISTER to continue!!</h4><br>
 
           <div class="modal-footer">
             <!-- <button class="btn btn-secondary" @click="closeModal">Close</button> -->
@@ -389,7 +389,7 @@
     right: 10px;
     cursor: pointer;
   }
-  h4 {
+  .watch-message {
     color: #fff;
     font-family: Inter;
     font-size: 22px;

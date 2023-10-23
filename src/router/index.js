@@ -72,6 +72,21 @@ const router = createRouter({
       component: () => import('../views/Search.vue'),
     },
     {
+      path: '/profile',
+      name: 'ProfilePage',
+      component: () => import('../views/Profile.vue'),
+    },
+    {
+      path: '/terms-conditions',
+      name: 'TermsCondition.vue',
+      component: () => import('../views/TermsCondition.vue'),
+    },
+    {
+      path: '/protection-policy',
+      name: 'ProtectionPolicy.vue',
+      component: () => import('../views/ProtectionPolicy.vue'),
+    },
+    {
       path: '/404',
       name: '404Page',
       component: () => import('../views/404Page.vue'),

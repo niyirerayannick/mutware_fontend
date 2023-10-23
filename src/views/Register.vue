@@ -19,6 +19,16 @@
               <label for="exampleFormControlInput1">Your phone number to confirm your account</label>
               <input v-model="phoneNumber" type="text" class="form-control" placeholder="Phone" />
             </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Select User Type</label>
+              <select class="form-control" v-model="userType">
+                <option value="" disabled>Select user type</option>
+                <option value="Parent">Parent</option>
+                <option value="Teacher">Teacher</option>
+                <option value="Guardian">Guardian</option>
+                <option value="Sibling">Sibling</option>
+              </select>
+            </div>  
             <label for="exampleFormControlInput1"
               >Set a password that will be used to access your Mutware Kid Tv account</label
             >
@@ -33,7 +43,7 @@
             <div class="form-check mb-2">
               <br />
               <input v-model="agreePrivacyPolicy" class="form-check-input" type="checkbox" id="autoSizingCheck" />
-              <label class="form-check-label" for="autoSizingCheck"> Agree our privacy policy <b>Here</b> </label>
+              <label class="form-check-label" for="autoSizingCheck"> Agree to our <router-link to="/protection-policy" target="_blank"><b>Privacy Policy</b></router-link> and <router-link to="/terms-conditions" target="_blank"><b>Terms & Conditions</b></router-link>  </label>
             </div>
           </div>
           <p class="text-center">
@@ -79,6 +89,7 @@ export default {
       phoneNumber: '',
       password: '',
       confirmPassword: '',
+      userType: '',
       agreePrivacyPolicy: false,
       loading: false,
       responseMessage: null,
@@ -176,5 +187,12 @@ export default {
   .register-container {
     padding: 40px; 
   }
+}
+a {
+  color: #fff;
+}
+a:hover{
+  text-decoration: none;
+  color: #fef2f2;
 }
 </style>

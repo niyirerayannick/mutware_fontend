@@ -47,11 +47,14 @@
           </div>
         </div>
         <div v-else>No videos available.</div>
-        <center>
-          <router-link :to="'video-list'" class="button-73" role="button">
-            Explore More
-          </router-link>
-          <!-- <button class="button-73" role="button">Explore More</button> -->
+        <center><br>
+          <div class="item button-typewriter" style="--bg-color: #e74c3c">
+            <div class="button__wrapper">
+              <router-link :to="'video-list'" class="explore-button" role="button">
+                <p>Explore More</p>
+              </router-link>
+            </div>
+          </div>
         </center>
       </div>
     </section>
