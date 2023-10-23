@@ -164,6 +164,9 @@ export default {
     margin-top : -54px;
     cursor: pointer;
   }
+  .dropdown-menu {
+      margin-left: 50% !important;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -176,6 +179,9 @@ export default {
     margin-left: 80%;
     margin-top : -54px;
     cursor: pointer;
+  }
+  .dropdown-menu {
+      margin-left: 70% !important;
   }
 }
 
