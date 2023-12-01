@@ -23,7 +23,13 @@
                   >
                   <div class="card">
                     <div class="card-body my-card">
-                      <router-link :to="'/watch/' + video.id">
+                      <!-- <router-link :to="'/watch/' + video.id">
+                        <img :src="video.banner" class="d-block w-100" style="height: 23.5vh;" alt="..." />
+                        <div class="video-play-loaders">
+                          <span class="play-icon play"><i class="fas fa-play"></i></span>
+                        </div>
+                      </router-link> -->
+                      <router-link :to="{ name: 'WatchVideo', params: { id: video.id }, query: { autoplay: true } }">
                         <img :src="video.banner" class="d-block w-100" style="height: 23.5vh;" alt="..." />
                         <div class="video-play-loaders">
                           <span class="play-icon play"><i class="fas fa-play"></i></span>

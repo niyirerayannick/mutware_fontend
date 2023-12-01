@@ -34,7 +34,7 @@
               <router-link to="/stream">
                 <img :src="require('@/assets/img/live-stream.png')" class="live-streaming-img" />
               </router-link>
-              <h2>Join Our <b>Live</b> session here</h2>
+              <p><b>Join Our Streamed Sessions</b> here, and explore educators tips and expert feedback on how to support our children's education with digital technology.</p>
             </div>
           </div>
         </div>
