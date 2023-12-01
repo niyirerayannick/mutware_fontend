@@ -104,34 +104,18 @@
         videoDetails: '',
         isVideoPlaying: false,
         relatedVideos: [],
-        popupVisible: false,
         isModalVisible: false,
         isPopupShown: false,
         lastPopupTime: 0,
         pauseStartTime: 0,
-        autoplayRequested: false,
       }
-    },
-    beforeRouteEnter(to, from, next) {
-      next((vm) => {
-        // Set a flag indicating autoplay is requested
-        vm.autoplayRequested = to.query.autoplay === 'true';
-      });
     },
     created() {
       this.user = JSON.parse(localStorage.getItem('user'));
-      // Check if autoplay parameter is present in the route
-      const autoplay = this.$route.query.autoplay;
-      if (autoplay && autoplay.toLowerCase() === 'true') {
-      }
     },
-    mounted() {
-      this.loadVideoDetails();
-
-      // If autoplay is requested, play the video
-      if (this.autoplayRequested) {
-        this.playVideo();
-      }
+    async mounted() {
+      await this.loadVideoDetails();
+      this.playVideo();
     },
     beforeRouteUpdate(to, from, next) {
       this.loadVideoDetails();
@@ -165,67 +149,32 @@
         const day = ('0' + date.getDate()).slice(-2)
         return `${year}/${month}/${day}`
       },
-      // playVideo() {
-      //   const videoPlayer = this.$refs.videoPlayer;
-      //   if (videoPlayer) {
-      //     videoPlayer.muted = false;
-
-      //     // Play the video directly
-      //     videoPlayer.play().catch((error) => {
-      //       // If autoplay is not allowed, you can handle the error here
-      //       console.error('Autoplay not allowed:', error);
-      //     });
-      //   }
-      // },
       playVideo() {
         const videoPlayer = this.$refs.videoPlayer;
 
         if (videoPlayer) {
-          videoPlayer.play();
-          // Listen for the 'canplay' event
           videoPlayer.addEventListener('canplay', () => {
-            // Set muted to false before playing
             videoPlayer.muted = false;
-            // Play the video
             videoPlayer.play();
-
-            // Remove the event listener to prevent it from firing multiple times
-            videoPlayer.removeEventListener('canplay', () => {
-              // Intentional empty block to ensure the event listener is removed
-            });
           });
+
+          // Try to play the video
+          const playPromise = videoPlayer.play();
+
+          // If autoplay is not allowed, handle the promise
+          if (playPromise !== undefined) {
+            playPromise.catch((error) => {
+              console.error('Autoplay not allowed:', error);
+            });
+          }
         }
       },
-
-
-      // playVideo() {
-      //   const videoPlayer = this.$refs.videoPlayer;
-
-      //   if (videoPlayer) {
-      //     // Listen for the 'canplay' event
-      //     videoPlayer.addEventListener('canplay', () => {
-      //       // Set muted to false before playing
-      //       videoPlayer.muted = false;
-
-      //       // Play the video
-      //       videoPlayer.play();
-
-      //       // Remove the event listener to prevent it from firing multiple times
-      //       videoPlayer.removeEventListener('canplay', () => {});
-      //     });
-      //   }
-      // },
-
-
       handlePlay() {
         this.isVideoPlaying = true;
         this.isPopupShown = false;
         this.pauseStartTime = 0;
       },
       handlePause() {
-        // this.isVideoPlaying = false;
-        // this.pauseStartTime = Math.round(this.$refs.videoPlayer.currentTime);
-
         this.isVideoPlaying = false;
         const videoPlayer = this.$refs.videoPlayer;
         if (videoPlayer) {
@@ -262,6 +211,7 @@
     },
   }
 </script>
+
 
 
 <style>
