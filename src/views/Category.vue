@@ -94,7 +94,7 @@ export default {
     async get_videos_list() {
       try {
         const category_name = this.$route.params.category_name
-        const response = await axios.get(`https://backend1.mutwarekidtv.xyz/related/${category_name}/?format=json`)
+        const response = await axios.get(`https://backend.mutwarekidtv.xyz/related/${category_name}/?format=json`)
         console.log('Response data:', response.data)
         this.videos_list = response.data
         this.loading = false

@@ -92,7 +92,7 @@ export default {
           phone: this.phoneNumber,
         };
         // Send a POST request to your API
-        const response = await axios.post('https://backend1.mutwarekidtv.xyz/accounts/profile/updates/?format=json', userData);
+        const response = await axios.post('https://backend.mutwarekidtv.xyz/accounts/profile/updates/?format=json', userData);
         console.log(response.data);
         this.responseMessage = 'Profile updated successfully!';
         setTimeout(() => {

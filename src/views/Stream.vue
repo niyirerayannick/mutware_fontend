@@ -194,7 +194,7 @@ export default {
     methods: {
       get_videos_list() {
         axios
-          .get('https://backend1.mutwarekidtv.xyz/videos/?format=json')
+          .get('https://backend.mutwarekidtv.xyz/videos/?format=json')
           .then((response) => {
             this.videosList = response.data;
             this.loading = false;

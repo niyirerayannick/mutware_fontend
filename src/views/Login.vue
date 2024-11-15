@@ -68,7 +68,7 @@ export default {
           email_or_telephone: this.emailOrPhone,
           password: this.password,
         }
-        const response = await axios.post('https://backend1.mutwarekidtv.xyz/accounts/login/?format=json', userData)
+        const response = await axios.post('https://backend.mutwarekidtv.xyz/accounts/login/?format=json', userData)
         console.log(response);
         // alert(JSON.stringify(response.data.user_info))
         // Assuming your backend sends a token upon successful login

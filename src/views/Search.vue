@@ -101,7 +101,7 @@ export default {
   methods: {
     getVideosList(searchQuery) {
       this.loading = true;
-      const apiUrl = `https://backend1.mutwarekidtv.xyz/videos/?search=${searchQuery}&format=json`;
+      const apiUrl = `https://backend.mutwarekidtv.xyz/videos/?search=${searchQuery}&format=json`;
 
       axios.get(apiUrl)
         .then((response) => {
@@ -116,7 +116,7 @@ export default {
     },
     // get_videos_list() {
     //   axios
-    //     .get('https://backend1.mutwarekidtv.xyz/videos/?format=json')
+    //     .get('https://backend.mutwarekidtv.xyz/videos/?format=json')
     //     .then((response) => {
     //       this.videos_list = response.data
     //       this.loading = false
